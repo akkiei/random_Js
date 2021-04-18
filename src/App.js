@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+// import  {  Suspense } from 'react';
+import ServerEvent from './EventSource';
+// import Cards from './CardsHook';
+import React from 'react';
+// const Cards = React.lazy(() => import('./CardsHook'));
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+	// componentDidMount() {
+	// 	this.setState({ flag: true });
+	// }
+
+	render() {
+		return (
+			<div>
+				HELLO EVENT SOURCES
+				<ServerEvent />
+			</div>
+		);
+	}
 }
 
 export default App;
